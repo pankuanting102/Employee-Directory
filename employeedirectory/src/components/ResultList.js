@@ -1,18 +1,20 @@
 import React from "react";
 
 function ResultList(props) {
-  console.log(props.results.results)
+  const profile = props.results.results
   return (
-    <ul className="list-group">
-    {props.results.results.map(result => (
-      <div className="list-group-item" key={result.id}>
-        <img alt={result.name} className="img-fluid" src={result.picture.large} />
+    <ul>
+    {profile ? profile.map(result => (
+      <div className="list-group-item" key={profile.forEach((item, i) => {
+        item.id = i + 1;
+      })}>
+        <img alt="1" className="img-fluid" src={result.picture.large} />
         <div>{result.name.first} {result.name.last}</div>
         <div>{result.phone}</div>
         <div>{result.dob.date.slice(0,10)}</div>
       </div>
       
-    ))}
+    )) : "Loaging..."}
   </ul>
 
 
