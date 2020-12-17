@@ -30,16 +30,13 @@ class SearchForm extends Component {
             // className="form-control"
             // placeholder="Search for a Gif"
             // id="search"
-            value={this.state.searchName}
+            // value={this.state.searchName}
             name="search"
             onChnage={this.handleInputChange}
             type="text"
             placeholder="Search Employee"
             id="search"
           />
-          <button onClick={this.handleFormSubmit}>
-            Search
-          </button>
         </div>
       </form>
     );
