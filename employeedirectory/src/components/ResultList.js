@@ -11,6 +11,7 @@ function ResultList(props) {
         <div className="table-title col-3">{result.phone}</div>
         <div className="table-title col-3">{result.email}</div>
         <div className="table-title col-2">{result.dob.date.slice(0,10)}</div>
+        
       </div>
       
     )) : "Loaging..."}
