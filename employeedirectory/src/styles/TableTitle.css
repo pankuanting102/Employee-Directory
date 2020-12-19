@@ -1,10 +1,13 @@
 .container {
     
     font-family: "Open Sans";
+    width: 80vw;
+    margin: auto;
     
 }
 
 .table-title{
     display: inline;
     margin-right: 8vw;
+    min-width: 8vw;
 }

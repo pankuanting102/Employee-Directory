@@ -18,7 +18,7 @@ class SearchResultContainer extends Component {
       .then(res => {
         console.log(res.data.results)
         this.setState(
-          { filteredUsers: res.data.results });
+          { allUsers: res.data.results, filteredUsers: res.data.results });
       })
   }
 
@@ -29,17 +29,15 @@ class SearchResultContainer extends Component {
     // Updating the input's state
     this.setState({
       [name]: value
+    }, ()=> {
+      console.log(this.state.searchName)
+      console.log(this.state.allUsers)
+      const filtered = this.state.allUsers.filter(result => result.name.first.includes(this.state.searchName))
+      console.log(filtered)
+      this.setState({
+        filteredUsers: filtered,
+      })
     });
-    console.log(this.state.searchName)
-    const filtered = this.state.filteredUsers.filter(result => result.name.first.includes(this.state.searchName))
-    console.log(filtered)
-    this.setState({
-      filteredUsers: filtered,
-    })
-    if (this.state.searchName == null)
-    this.setState({
-      filteredUsers: []
-    })
   };
 
 

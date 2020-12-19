@@ -3,11 +3,12 @@ import '../styles/TableTitle.css';
 function TableTitle () {
   return (
       <div className="container">
-          <div class="table-title">Profile Image</div>
-          <div class="table-title">Name</div>
-          <div class="table-title">Phone Number</div>
-          <div class="table-title">Email</div>
-          <div class="table-title">Date of Birth</div>
+          <div className="table-title">Profile Image</div>
+          <div className="table-title">Name</div>
+          <div className="table-title">Phone Number</div>
+          <div className="table-title">Email</div>
+          <div className="table-title">Date of Birth</div>
+          <hr></hr>
       </div>
   )
 }

@@ -4,10 +4,8 @@ function ResultList(props) {
   const profile = props.results
   return (
     <ul>
-    {profile ? profile.map(result => (
-      <div className="list-group-item" key={profile.forEach((item, i) => {
-        item.id = i + 1;
-      })}>
+    {profile ? profile.map((result, index) => (
+      <div className="list-group-item" key = {index}>
         <img alt="1" className="img-fluid" src={result.picture.large} />
         <div>{result.name.first} {result.name.last}</div>
         <div>{result.phone}</div>
