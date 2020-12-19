@@ -1,13 +1,17 @@
-.container {
+.wrapper {
     
     font-family: "Open Sans";
-    width: 80vw;
+    width: 85vw;
     margin: auto;
-    
+    margin-bottom: 30px;
+
 }
 
-.table-title{
-    display: inline;
-    margin-right: 8vw;
-    min-width: 8vw;
+/* .table-title{
+    margin-right: 20px;
+
+} */
+
+hr.rule{
+    border-color: rgb(176, 176, 176);
 }
