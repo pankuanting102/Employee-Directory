@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 // import SearchForm from "./SearchForm";
 import ResultList from "./ResultList";
-import FilteredResultList from "./FilteredList"
 import TopNav from "./Nav";
 import TableTitle from "./TableTitle";
 import API from "../utils/API";
@@ -36,6 +35,10 @@ class SearchResultContainer extends Component {
     console.log(filtered)
     this.setState({
       filteredUsers: filtered,
+    })
+    if (this.state.searchName == null)
+    this.setState({
+      filteredUsers: []
     })
   };
 

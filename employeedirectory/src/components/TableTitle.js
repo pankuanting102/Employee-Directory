@@ -1,13 +1,13 @@
 import React  from 'react';
-
+import '../styles/TableTitle.css';
 function TableTitle () {
   return (
-      <div>
-          <div>Profile Image</div>
-          <div>Name</div>
-          <div>Phone Number</div>
-          <div>Email</div>
-          <div>Date of Birth</div>
+      <div className="container">
+          <div class="table-title">Profile Image</div>
+          <div class="table-title">Name</div>
+          <div class="table-title">Phone Number</div>
+          <div class="table-title">Email</div>
+          <div class="table-title">Date of Birth</div>
       </div>
   )
 }

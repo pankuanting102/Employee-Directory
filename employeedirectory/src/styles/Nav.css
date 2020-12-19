@@ -1,0 +1,21 @@
+header {
+    background: #14214A;
+    width: 100vw;
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Open Sans";
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 18px;
+
+}
