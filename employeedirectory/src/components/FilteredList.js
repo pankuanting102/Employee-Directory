@@ -1,7 +1,7 @@
 import React from "react";
 
-function ResultList(props) {
-  const profile = props.results
+function FilteredResultList(props) {
+  const profile = props.results.results
   return (
     <ul>
     {profile ? profile.map(result => (
@@ -22,4 +22,4 @@ function ResultList(props) {
   );
 }
 
-export default ResultList;
+export default FilteredResultList;
