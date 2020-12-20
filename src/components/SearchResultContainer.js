@@ -50,8 +50,7 @@ class SearchResultContainer extends Component {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
 
-    const sorted = this.state.allUsers.reverse(); 
-    
+    const sorted = this.state.allUsers.sort((a, b) => a.name.first.localeCompare(b.name.first))
     console.log(sorted)
     console.log("clicked")
     this.setState({
