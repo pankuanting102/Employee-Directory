@@ -23,5 +23,5 @@ https://github.com/pankuanting102/employee-directory
 https://employee-directory-ktp102.herokuapp.com/
 
 <br><div style="width: 90vw; margin: auto; border: 1px black solid">
-<img src="">
+<img src="https://github.com/pankuanting102/employee-directory/blob/master/public/asset/demo.gif?raw=true">
 </div>
