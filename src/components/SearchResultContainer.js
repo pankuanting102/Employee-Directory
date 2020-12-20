@@ -12,7 +12,6 @@ class SearchResultContainer extends Component {
     searchName: "",
   };
 
-  // When this component mounts, search the Giphy API for pictures of kittens
   componentDidMount() {
     API.getUsers().then((res) => {
       console.log(res.data.results);
