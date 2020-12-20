@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import SearchForm from "./SearchForm";
 import ResultList from "./ResultList";
 import TopNav from "./Nav";
-import TableTitle from "./TableTitle";
+import "../styles/TableTitle.css";
 import API from "../utils/API";
 
 class SearchResultContainer extends Component {
@@ -63,6 +63,7 @@ class SearchResultContainer extends Component {
     return (
       <div>
         <TopNav />
+        <div className="wrapper">
         <form>
           <input
             value={this.state.searchName}
@@ -72,10 +73,11 @@ class SearchResultContainer extends Component {
             placeholder="Search Employee"
           />
         </form>
+        </div>
         <div className="wrapper">
           <div className="row">
             <div className="table-title col-1">Image</div>
-            <div className="table-title col-3" onClick={this.handleSubmit}>Name</div>
+            <div className="table-title click col-3" onClick={this.handleSubmit}>Name</div>
             <div className="table-title col-3">Phone Number</div>
             <div className="table-title col-3">Email</div>
             <div className="table-title col-2">DOB</div>
