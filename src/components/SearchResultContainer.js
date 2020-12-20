@@ -10,6 +10,7 @@ class SearchResultContainer extends Component {
     allUsers: [],
     filteredUsers: [],
     searchName: "",
+    trackSort: "",
   };
 
   componentDidMount() {
@@ -48,13 +49,13 @@ class SearchResultContainer extends Component {
   handleSubmit = (event) => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-    if (this.state.searchName !== "ascend") {
+    if (this.state.trackSort !== "ascend") {
       const sorted = this.state.allUsers.sort((a, b) => a.name.first.localeCompare(b.name.first))
       console.log(sorted)
       console.log("clicked")
       this.setState({
         filteredUsers: sorted,
-        searchName:"ascend"
+        trackSort:"ascend"
       });
     }
 
@@ -63,7 +64,7 @@ class SearchResultContainer extends Component {
       console.log("clicked")
       this.setState({
         filteredUsers: sorted,
-        searchName:"descend"
+        trackSort:"descend"
       });}
 
   };
