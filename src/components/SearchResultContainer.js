@@ -48,13 +48,24 @@ class SearchResultContainer extends Component {
   handleSubmit = (event) => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
+    if (this.state.searchName !== "ascend") {
+      const sorted = this.state.allUsers.sort((a, b) => a.name.first.localeCompare(b.name.first))
+      console.log(sorted)
+      console.log("clicked")
+      this.setState({
+        filteredUsers: sorted,
+        searchName:"ascend"
+      });
+    }
 
-    const sorted = this.state.allUsers.sort((a, b) => a.name.first.localeCompare(b.name.first))
-    console.log(sorted)
-    console.log("clicked")
-    this.setState({
-      filteredUsers: sorted,
-    });
+    else{  const sorted = this.state.allUsers.sort((a, b) => b.name.first.localeCompare(a.name.first))
+      console.log(sorted)
+      console.log("clicked")
+      this.setState({
+        filteredUsers: sorted,
+        searchName:"descend"
+      });}
+
   };
 
   render() {
