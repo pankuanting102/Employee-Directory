@@ -36,7 +36,7 @@ class SearchResultContainer extends Component {
         console.log(this.state.searchName);
         console.log(this.state.allUsers);
         const filtered = this.state.allUsers.filter((result) =>
-          result.name.first.includes(this.state.searchName)
+          result.name.first.toLowerCase().includes(this.state.searchName.toLowerCase())
         );
         console.log(filtered);
         this.setState({
